@@ -1,21 +1,33 @@
-import React, { useState, useRef, useEffect } from "react";
-import { View, Text, Dimensions, Pressable, TextInput, KeyboardAvoidingView } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { SafeAreaView } from "react-native-safe-area-context";
-
-import styles from "./styles";
+import React from 'react';
+import { View, Text, Pressable, Image } from 'react-native';
+import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 export default function HomePage() {
-    const navigation = useNavigation()
-    const windowWidth = Dimensions.get('window').width;
-    const windowHeight = Dimensions.get('window').height;
+    const navigation = useNavigation();
 
+    const handlePlayPress = (screenName) => {
+        navigation.navigate(screenName);
+      };
+
+    const handleRulesPress = () => {
+        // Navigation logic goes here
+    };
 
     return (
         <View style={styles.container}>
-        <Text style={{ fontSize: 25, padding: 20, color: "white", paddingTop: 50, textAlign: 'center', marginBottom: -25 }}>Geography Trivia!</Text>
-        <Text style={{ fontSize: 15, padding: 20, color: "white", textAlign:'center' }}>Play Geography Trivia Today!</Text>
+            <Image 
+              source={require('/Users/oooople/GeographyTrivia-1/assets/globe.png')} // Update with the path to your globe image
+              style={styles.globeImage}
+            />
+            <Text style={styles.title}>GEOGRAPHY TRIVIA</Text>
+            <Pressable style={styles.playButton} onPress={handlePlayPress}>
+                <Text style={styles.playButtonText}>PLAY</Text>
+            </Pressable>
+            <Text style={styles.subtitle}>PUT YOUR GEOGRAPHY SKILLS TO THE TEST</Text>
+            <Pressable style={styles.rulesButton} onPress={handleRulesPress}>
+                <Text style={styles.rulesButtonText}>RULES</Text>
+            </Pressable>
         </View>
-
-    )
+    );
 }
