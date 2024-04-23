@@ -57,7 +57,58 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
     },
-    // ... other styles you may need
+    testButton: {
+        backgroundColor: '#50e3c2', // Green button color
+        paddingVertical: 10,
+
+        paddingHorizontal: 20,
+        borderRadius: 40,
+        position: 'absolute',
+        top: 60,
+        right: 30,
+        padding: 10,
+    },
+    testButtonText: {
+        fontSize: 14,
+        fontFamily: 'LuckiestGuy',
+        color: 'white',
+        fontWeight: 'bold',
+    },
+    wrongButton: {
+        backgroundColor: '#50e3c2', // Green button color
+        paddingVertical: 10,
+
+        paddingHorizontal: 20,
+        borderRadius: 40,
+        position: 'absolute',
+        top: 100,
+        right: 30,
+        padding: 10,
+    },
+    wrongButtonText: {
+        fontSize: 14,
+        fontFamily: 'LuckiestGuy',
+        color: 'white',
+        fontWeight: 'bold',
+    },
+    resultsButton: {
+        backgroundColor: '#50e3c2', // Green button color
+        paddingVertical: 10,
+
+        paddingHorizontal: 20,
+        borderRadius: 40,
+        position: 'absolute',
+        top: 140,
+        right: 30,
+        padding: 10,
+    },
+    resultsButtonText: {
+        fontSize: 14,
+        fontFamily: 'LuckiestGuy',
+        color: 'white',
+        fontWeight: 'bold',
+    },
+ 
 });
 
 export default styles;

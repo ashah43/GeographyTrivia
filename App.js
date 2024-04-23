@@ -8,6 +8,9 @@ import { useFonts } from 'expo-font';
 import * as Font from 'expo-font';
 import { LuckiestGuy_400Regular } from '@expo-google-fonts/luckiest-guy';
 import AppLoading from 'expo-app-loading';
+import CorrectAnswerPage from './screens/CorrectAnswerPage';
+import WrongAnswerPage from './screens/WrongAnswerPage';
+import ResultsPage from './screens/ResultsPage';
 
 
 // Load the font asynchronously
@@ -32,6 +35,9 @@ export default function App() {
         <Stack.Screen name="HomePage" component={HomePage}/>
         <Stack.Screen name="CategoryPage" component={CategoryPage}/>
         <Stack.Screen name="RulesPage" component={RulesPage}/>
+        <Stack.Screen name="CorrectAnswerPage" component={CorrectAnswerPage}/>
+        <Stack.Screen name="WrongAnswerPage" component={WrongAnswerPage}/>
+        <Stack.Screen name="ResultsPage" component={ResultsPage}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
