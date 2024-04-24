@@ -11,6 +11,11 @@ import AppLoading from 'expo-app-loading';
 import CorrectAnswerPage from './screens/CorrectAnswerPage';
 import WrongAnswerPage from './screens/WrongAnswerPage';
 import ResultsPage from './screens/ResultsPage';
+import CapitalsPage from './screens/CapitalsPage';
+import CitiesPage from './screens/CitiesPage'; 
+import CountriesPage from './screens/CountriesPage';
+import LandmarksPage from './screens/LandmarksPage'; 
+import StatesPage from './screens/StatesPage';
 
 
 // Load the font asynchronously
@@ -38,6 +43,11 @@ export default function App() {
         <Stack.Screen name="CorrectAnswerPage" component={CorrectAnswerPage}/>
         <Stack.Screen name="WrongAnswerPage" component={WrongAnswerPage}/>
         <Stack.Screen name="ResultsPage" component={ResultsPage}/>
+        <Stack.Screen name="CapitalsPage" component={CapitalsPage}/>
+        <Stack.Screen name="CitiesPage" component={CitiesPage}/>
+        <Stack.Screen name="CountriesPage" component={CountriesPage}/>
+        <Stack.Screen name="LandmarksPage" component={LandmarksPage}/>
+        <Stack.Screen name="StatesPage" component={StatesPage}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

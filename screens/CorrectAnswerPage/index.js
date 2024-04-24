@@ -18,7 +18,7 @@ export default function CorrectAnswerPage() {
         <View style={styles.container}>
             <Text style={styles.title}>That's Correct Keep On Going!</Text>
             <Image 
-              source={require("/Users/oooople/GeographyTrivia-1/assets/checkmark.png")} // Update with the path to your globe image
+              source={require("/Users/leo/Desktop/Academics/Spring24/EC327/Project/GeographyTrivia/assets/checkmark.png")} // Update with the path to your globe image
               style={styles.globeImage}
             />
             
