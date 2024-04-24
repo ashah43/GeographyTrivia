@@ -25,6 +25,7 @@ export default function StatesPage() {
           placeholder="USER'S RESPONSE"
           placeholderTextColor="#000"
         />
+         <View style={styles.inputUnderline} />
       </View>
       <TouchableOpacity style={styles.submitButton} onPress={handleSubmitPress}>
         <Text style={styles.submitButtonText}>SUBMIT</Text>

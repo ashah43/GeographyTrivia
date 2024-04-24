@@ -25,7 +25,7 @@ export default function HomePage() {
     return (
         <View style={styles.container}>
             <Image 
-              source={require("/Users/leo/Desktop/Academics/Spring24/EC327/Project/GeographyTrivia/assets/globe.png")} // Update with the path to your globe image
+              source={require("/Users/oooople/GeographyTrivia-1/assets/globe.png")} // Update with the path to your globe image
               style={styles.globeImage}
             />
             <Text style={styles.title}>GEOGRAPHY TRIVIA</Text>

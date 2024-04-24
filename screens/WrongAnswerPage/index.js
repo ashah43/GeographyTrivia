@@ -19,7 +19,7 @@ export default function WrongAnswerPage() {
             <Text style={styles.title}>SORRY THATS INCORRECT</Text>
             <Text style={styles.subtitle}>You're sharpening your skills with every play!</Text>
             <Image 
-              source={require("/Users/leo/Desktop/Academics/Spring24/EC327/Project/GeographyTrivia/assets/wrong.png")} // Update with the path to your globe image
+              source={require("/Users/oooople/GeographyTrivia-1/assets/wrong.png")} // Update with the path to your globe image
               style={styles.globeImage}
             />
             

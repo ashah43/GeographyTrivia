@@ -22,9 +22,10 @@ export default function CitiesPage() {
           style={styles.input}
           onChangeText={setResponse}
           value={response}
-          placeholder="USER'S RESPONSE"
+          placeholder="Answer Here"
           placeholderTextColor="#000"
         />
+         <View style={styles.inputUnderline} />
       </View>
       <TouchableOpacity style={styles.submitButton} onPress={handleSubmitPress}>
         <Text style={styles.submitButtonText}>SUBMIT</Text>

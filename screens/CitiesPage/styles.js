@@ -12,30 +12,26 @@ export default StyleSheet.create({
   },
   // Use absolute positioning for questionText to place it at 10% of the height
   questionText: {
-    fontSize: 40,
+    fontSize: 60,
     fontWeight: 'bold',
     fontFamily: 'LuckiestGuy',
-    top: height * 0.1,
+    top: height * 0.05,
+    marginLeft: 26,
   },
   // Use absolute positioning for question to place it at 30% of the height
   question: {
-    fontSize: 24,
+    fontSize: 25,
     fontFamily: 'LuckiestGuy',
-    top: height * 0.2,
+    top: height * 0.15,
   },
   // Use absolute positioning for input to place it at 50% of the height
   input: {
-    fontSize: 18,
+    fontSize: 25,
     textAlign: 'center',
     fontFamily: 'LuckiestGuy',
     top: height * 0.4, // Assuming the input height is 40, we subtract half of it to center it
   },
-  inputUnderline: {
-    width: '50%',
-    borderBottomWidth: 5,
-    position: 'absolute',
-    top: height * 0.7,
-  },
+  
   submitButton: {
     width: '80%',
     backgroundColor: '#000',
@@ -51,5 +47,14 @@ export default StyleSheet.create({
     fontSize: 20,
     fontFamily: 'LuckiestGuy',
     fontWeight: 'bold',
+  },
+  inputUnderline: {
+    width: '50%',           // Set the desired width of the underline
+  borderBottomWidth: 5,   // Thickness of the underline
+  position: 'absolute',   // Keeps the element in an absolute position
+  top: height * 0.7,      // Adjusts the vertical position
+  left: -140,
+  borderRightWidth: 500,
+  borderLeftWidth: 500,  
   },
 });
