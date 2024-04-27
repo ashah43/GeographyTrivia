@@ -17,7 +17,7 @@ export default function CountriesPage() {
 
   useEffect(() => {
     // Load the questions from the local JSON file
-    const loadedQuestions = require('/Users/oooople/GeographyTrivia-1/assets/questions.json').questions;
+    const loadedQuestions = require('/Users/oooople/GeographyTrivia-1/assets/countries.json').questions;
     setQuestions(loadedQuestions);
     
   }, []);

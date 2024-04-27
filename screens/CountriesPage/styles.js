@@ -23,7 +23,7 @@ export default StyleSheet.create({
     fontSize: 25,
     fontFamily: 'LuckiestGuy',
     top: height * 0.15,
-    left: 0,
+    paddingHorizontal: 20,
     alignItems: "center",
     textAlign: "center",
   },
