@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { SafeAreaView, View, Text, TextInput, TouchableOpacity, Button } from 'react-native';
+import { SafeAreaView, View, Text, TextInput, TouchableOpacity, Button, Alert } from 'react-native';
 import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 import { useFocusEffect } from '@react-navigation/native';
@@ -10,6 +10,7 @@ export default function LandmarksPage() {
   const navigation = useNavigation();
   const [isCorrect, setIsCorrect] = useState(null);  // State to store the correctness of the response
   const [correctCount, setCorrectCount] = useState(0);
+  const [timer, setTimer] = useState(10); 
 
   const handleSubmitPress = () => {
     if (currentQuestion && response.trim().toLowerCase() === currentQuestion.answer.toLowerCase()) {
@@ -30,7 +31,21 @@ export default function LandmarksPage() {
     const loadedQuestions = require('/Users/leo/Desktop/Academics/Spring24/EC327/Project/GeographyTrivia/assets/landmarks.json').questions;
     setQuestions(loadedQuestions);
     
+    const interval = setInterval(() => {
+      setTimer((prevTimer) => prevTimer - 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    if (timer === 0) {
+      Alert.alert('Time Up', 'Time is up! Moving to results.', [
+        { text: 'OK', onPress: () => navigation.navigate('ResultsPage') }
+      ]);
+      setTimer(180); // Reset timer if you plan to stay on the page, adjust logic as needed
+    }
+  }, [timer, navigation]);
 
   useFocusEffect(
     useCallback(() => {
@@ -58,6 +73,7 @@ export default function LandmarksPage() {
       <Text style={styles.question}>
         {currentQuestion ? currentQuestion.question : 'Loading...'}
       </Text>
+      <Text style={styles.timerDisplay}>Time Remaining: {Math.floor(timer / 60)}:{(timer % 60).toString().padStart(2, '0')}</Text>
     </View>
         <TextInput
           style={styles.input}

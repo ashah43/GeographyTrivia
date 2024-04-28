@@ -11,12 +11,31 @@ export default function CapitalsPage() {
   const [isCorrect, setIsCorrect] = useState(null);  // State to store the correctness of the response
   const [correctCount, setCorrectCount] = useState(0);
   const navigation = useNavigation();
+    const [timer, setTimer] = useState(10); 
 
   useEffect(() => {
     const loadedQuestions = require('/Users/leo/Desktop/Academics/Spring24/EC327/Project/GeographyTrivia/assets/capitals.json').questions;
     setQuestions(loadedQuestions);
+
+    const interval = setInterval(() => {
+      setTimer((prevTimer) => prevTimer - 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    if (timer === 0) {
+      Alert.alert('Time Up', 'Time is up! Moving to results.', [
+        { text: 'OK', onPress: () => navigation.navigate('ResultsPage') }
+      ]);
+      setTimer(180); // Reset timer if you plan to stay on the page, adjust logic as needed
+    }
+  }, [timer, navigation]);
+
+  
+  
+  
   useFocusEffect(
     useCallback(() => {
       if (questions.length) {
@@ -48,6 +67,7 @@ export default function CapitalsPage() {
         <Text style={styles.question}>
           {currentQuestion ? currentQuestion.question : 'Loading...'}
         </Text>
+        <Text style={styles.timerDisplay}>Time Remaining: {Math.floor(timer / 60)}:{(timer % 60).toString().padStart(2, '0')}</Text>
       </View>
       <TextInput
         style={styles.input}
