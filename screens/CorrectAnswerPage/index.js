@@ -1,35 +1,38 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, Pressable, Image } from 'react-native';
 import styles from './styles';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 export default function CorrectAnswerPage() {
     const navigation = useNavigation();
+    const route = useRoute();
+    const correctCount = route.params?.correctCount; // Using optional chaining in case params is undefined
 
-    const handlePlayPress = () => {
-        navigation.navigate('CategoryPage');
+
+    const handleNextPress = () => {
+        navigation.goBack();
       };
 
-    const handleRulesPress = () => {
-        navigation.navigate('HomePage');    
+    const handleResultPress = () => {
+        navigation.navigate('ResultsPage');    
     };
  
     return (
         <View style={styles.container}>
             <Text style={styles.title}>That's Correct Keep On Going!</Text>
             <Image 
-              source={require("/Users/oooople/GeographyTrivia-1/assets/checkmark.png")} // Update with the path to your globe image
+              source={require("/Users/leo/Desktop/Academics/Spring24/EC327/Project/GeographyTrivia/assets/checkmark.png")} // Update with the path to your globe image
               style={styles.globeImage}
             />
             
             
             
-            <TouchableOpacity style={styles.playButton} onPress={handlePlayPress}>
+            <TouchableOpacity style={styles.playButton} onPress={handleNextPress}>
                 <Text style={styles.playButtonText}>Next Question</Text>
             </TouchableOpacity>
-            <Text style={styles.subtitle}>Streak: #</Text>
-            <TouchableOpacity style={styles.rulesButton} onPress={handleRulesPress}>
-                <Text style={styles.rulesButtonText}>Main Menu</Text>
+            <Text style={styles.subtitle}>Streak: {correctCount}</Text>
+            <TouchableOpacity style={styles.rulesButton} onPress={handleResultPress}>
+                <Text style={styles.rulesButtonText}>Results</Text>
             </TouchableOpacity>
 
             

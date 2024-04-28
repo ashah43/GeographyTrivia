@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-const CategorySelectScreen = ({ navigation }) => {
+export default CategoryPage = ({ navigation }) => {
   const categories = ['Countries', 'States', 'Cities', 'Capitals', 'Landmarks'];
   
   // You could also directly navigate within this function, using the category name
@@ -30,4 +30,4 @@ const CategorySelectScreen = ({ navigation }) => {
   );
 };
 
-export default CategorySelectScreen;
+

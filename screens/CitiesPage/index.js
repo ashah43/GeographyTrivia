@@ -8,26 +8,37 @@ import { useFocusEffect } from '@react-navigation/native';
 export default function CitiesPage() {
   const [response, setResponse] = useState('');
   const navigation = useNavigation();
+  const [isCorrect, setIsCorrect] = useState(null);  // State to store the correctness of the response
+  const [correctCount, setCorrectCount] = useState(0);
 
   const handleSubmitPress = () => {
-    navigation.navigate('CategoryPage');
+    if (currentQuestion && response.trim().toLowerCase() === currentQuestion.answer.toLowerCase()) {
+      setIsCorrect(true);
+      setCorrectCount(correctCount + 1);
+      navigation.navigate('CorrectAnswerPage', { correctCount: correctCount + 1 });
+    } else {
+      setIsCorrect(false);
+      navigation.navigate('WrongAnswerPage', { correctCount: 0 });
+      setCorrectCount(0);
+    }
   };
+
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(null);
 
   useEffect(() => {
     // Load the questions from the local JSON file
-    const loadedQuestions = require('/Users/oooople/GeographyTrivia-1/assets/cities.json').questions;
+    const loadedQuestions = require('/Users/leo/Desktop/Academics/Spring24/EC327/Project/GeographyTrivia/assets/cities.json').questions;
     setQuestions(loadedQuestions);
     
   }, []);
 
   useFocusEffect(
     useCallback(() => {
-      // Function to pick a random question from loaded questions
       if (questions.length) {
         const randomIndex = Math.floor(Math.random() * questions.length);
         setCurrentQuestion(questions[randomIndex]);
+        setIsCorrect(null);  // Reset correctness state when new question is loaded
       }
     }, [questions])
   );
