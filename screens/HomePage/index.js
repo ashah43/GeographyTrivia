@@ -25,7 +25,7 @@ export default function HomePage() {
     return (
         <View style={styles.container}>
             <Image 
-              source={require("/Users/leo/Desktop/Academics/Spring24/EC327/Project/GeographyTrivia/assets/globe.png")} // Update with the path to your globe image
+              source={require("/Users/oooople/GeographyTrivia-1/assets/globe.png")} // Update with the path to your globe image
               style={styles.globeImage}
             />
             <Text style={styles.title}>GEOGRAPHY TRIVIA</Text>
@@ -35,15 +35,6 @@ export default function HomePage() {
             <Text style={styles.subtitle}>PUT YOUR GEOGiRAPHY SKILLS TO THE TEST</Text>
             <TouchableOpacity style={styles.rulesButton} onPress={handleRulesPress}>
                 <Text style={styles.rulesButtonText}>RULES</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.testButton} onPress={handleCAPress}>
-                <Text style={styles.testButtonText}>Correct Answer</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.wrongButton} onPress={handleWAPress}>
-                <Text style={styles.wrongButtonText}>Wrong Answer</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.resultsButton} onPress={handleResultsPress}>
-                <Text style={styles.resultsButtonText}>Results</Text>
             </TouchableOpacity>
         </View>
     );

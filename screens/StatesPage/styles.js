@@ -32,14 +32,15 @@ export default StyleSheet.create({
     fontSize: 25,
     textAlign: 'center',
     fontFamily: 'LuckiestGuy',
-    top: height * 0.5, // Assuming the input height is 40, we subtract half of it to center it
+    top: height * 0.75, // Assuming the input height is 40, we subtract half of it to center it
+    position: "absolute",
   },
   inputUnderline: {
     width: '50%',           // Set the desired width of the underline
   borderBottomWidth: 5,   // Thickness of the underline
   position: 'absolute',   // Keeps the element in an absolute position
   top: height * 0.78,      // Adjusts the vertical position
-  left: -70,
+  textAlign: "center",
   borderRightWidth: 500,
   borderLeftWidth: 500,  
   },
@@ -58,5 +59,15 @@ export default StyleSheet.create({
     fontSize: 20,
     fontFamily: 'LuckiestGuy',
     fontWeight: 'bold',
+  },
+  timerDisplay: {
+    alignItems: "center",
+    textAlign: 'center',
+    alignContent: "center",
+    color: 'black',
+    fontSize: 20,
+    fontFamily: 'LuckiestGuy',
+    fontWeight: 'bold',
+    
   },
 });

@@ -16,6 +16,7 @@ import CitiesPage from './screens/CitiesPage';
 import CountriesPage from './screens/CountriesPage';
 import LandmarksPage from './screens/LandmarksPage'; 
 import StatesPage from './screens/StatesPage';
+import { GameProvider } from '/Users/oooople/GeographyTrivia-1/context/GameContext.js'; // adjust the import path as needed
 
 
 // Load the font asynchronously
@@ -27,6 +28,7 @@ Font.loadAsync({
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+ 
   const [fontsLoaded] = useFonts({
     LuckiestGuy: LuckiestGuy_400Regular,
   });
@@ -35,6 +37,7 @@ export default function App() {
     return <AppLoading />;
   }
   return (
+    <GameProvider>
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false, headerTitleStyle: {color: "white"}, headerTintColor: 'white', headerStyle: {backgroundColor: "rgb(22, 23, 24)"}}}>
         <Stack.Screen name="HomePage" component={HomePage}/>
@@ -50,6 +53,7 @@ export default function App() {
         <Stack.Screen name="StatesPage" component={StatesPage}/>
       </Stack.Navigator>
     </NavigationContainer>
+    </GameProvider>
   );
   
 }
