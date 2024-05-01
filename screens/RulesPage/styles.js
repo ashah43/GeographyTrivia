@@ -16,6 +16,7 @@ export default StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     marginBottom: 10,
+    textAlign: "center",
   },
   rulesListBox: {
     backgroundColor: 'white',
@@ -27,14 +28,15 @@ export default StyleSheet.create({
   },
   headerText: {
     fontFamily: 'LuckiestGuy',
-    fontSize: 24,
+    fontSize: 64,
     fontWeight: 'bold',
-    color: '#000',
+    color: '#7C53C3',
+    textAlign: "center",
   },
   rule: {
     fontFamily: 'LuckiestGuy',
-    fontSize: 18,
-    fontWeight: '500',
+    fontSize: 32,
+    fontWeight: 'bold',
     color: '#000',
     textAlign: 'left',
     marginBottom: 10,
@@ -55,7 +57,7 @@ export default StyleSheet.create({
   },
   buttonText: {
     fontFamily: 'LuckiestGuy',
-    fontSize: 20,
+    fontSize: 36,
     fontWeight: 'bold',
     color: '#7C53C3', // The purple color to match the background
   },

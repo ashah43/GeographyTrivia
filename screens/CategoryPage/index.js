@@ -9,6 +9,7 @@ export default CategoryPage = ({ navigation }) => {
   const handlePress = (category) => {
     let page = `${category}Page`;
     navigation.navigate(page);
+    
   };
 
   return (

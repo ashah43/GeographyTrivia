@@ -15,13 +15,13 @@ const handleMainMenuPress = () => {
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.content}>
         <View style={styles.rulesHeaderBox}>
-          <Text style={styles.headerText}>RULES HOW TO PLAY</Text>
+          <Text style={styles.headerText}>HOW TO PLAY</Text>
         </View>
         <View style={styles.rulesListBox}>
           <Text style={styles.rule}>- SELECT A CATEGORY YOU WOULD LIKE TO TRY</Text>
-          <Text style={styles.rule}>- TRY TO GET AS MANY QUESTIONS CORRECT CONSECUTIVELY.</Text>
-          <Text style={styles.rule}>- GAME OVER WHEN YOU GET A QUESTION WRONG.</Text>
-          <Text style={styles.rule}>- HAVE FUN AND REFINE THOSE GEOGRAPHY SKILLS!</Text>
+          <Text style={styles.rule}>- TRY TO GET AS MANY QUESTIONS CORRECT CONSECUTIVELY</Text>
+          <Text style={styles.rule}>- GAME OVER WHEN YOU GET A QUESTION WRONG</Text>
+          <Text style={styles.rule}>- HAVE FUN AND REFINE THOSE GEOGRAPHY SKILLS</Text>
         </View>
       <TouchableOpacity style={styles.button} onPress={handleMainMenuPress}>
         <Text style={styles.buttonText}>main menu</Text>
