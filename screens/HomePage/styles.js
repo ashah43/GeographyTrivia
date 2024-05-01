@@ -3,15 +3,15 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f5a623', // Mustard background color
+        backgroundColor: '#f5a623', 
         alignItems: 'center',
         justifyContent: 'center',
-        paddingHorizontal: 20, // Add padding horizontally
+        paddingHorizontal: 20,
     },
     globeImage: {
         width: 250, // Adjust size as needed
         height: 250, // Adjust size as needed
-        marginBottom: 20, // Space below the image
+        marginBottom: 20,
     },
     title: {
         fontSize: 64, // Large text size for title
@@ -19,14 +19,14 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 20, // Space below the title
+        marginBottom: 20, 
     },
     playButton: {
         backgroundColor: '#50e3c2', // Green button color
         paddingVertical: 20,
         paddingHorizontal: 60,
         borderRadius: 40,
-        marginBottom: 30, // Space below the button
+        marginBottom: 30, 
     },
     playButtonText: {
         fontSize: 24,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         fontFamily: 'LuckiestGuy',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 30, // Space below the subtitle
+        marginBottom: 30,
     },
     rulesButton: {
         backgroundColor: '#50e3c2', // Green button color
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 
         paddingHorizontal: 60,
         borderRadius: 40,
-        marginBottom: 30, // Space below the button
+        marginBottom: 30,
     },
     rulesButtonText: {
         fontSize: 24,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
     },
-    // ... other styles you may need
+    
 });
 
 export default styles;

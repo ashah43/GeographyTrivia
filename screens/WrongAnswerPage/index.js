@@ -9,14 +9,12 @@ export default function WrongAnswerPage() {
   const { incrementTotalQuestions, resetStreak } = useContext(GameContext);
 
   const handleResultPress = () => {
-    // Here you should pass the values to ResultsPage if needed, or the ResultsPage can directly use the context to get these values.
     navigation.navigate('ResultsPage');
   };
 
   const handleNextPress = () => {
-     // Increment the count of total questions
-    resetStreak(); // Reset the streak
-    navigation.goBack(); // This will take you back to the CapitalsPage for the next question
+    resetStreak(); 
+    navigation.goBack(); 
   };
 
   return (

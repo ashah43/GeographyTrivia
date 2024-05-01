@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: '#7C53C3', // The purple background color
+    backgroundColor: '#7C53C3',
   },
   content: {
     flex: 1,
@@ -22,7 +22,7 @@ export default StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
-    paddingBottom: 30, // Add extra padding at the bottom for aesthetic
+    paddingBottom: 30, 
     alignItems: 'center',
     marginBottom: 10,
   },
@@ -59,6 +59,6 @@ export default StyleSheet.create({
     fontFamily: 'LuckiestGuy',
     fontSize: 36,
     fontWeight: 'bold',
-    color: '#7C53C3', // The purple color to match the background
+    color: '#7C53C3', 
   },
 });

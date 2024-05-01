@@ -16,10 +16,10 @@ import CitiesPage from './screens/CitiesPage';
 import CountriesPage from './screens/CountriesPage';
 import LandmarksPage from './screens/LandmarksPage'; 
 import StatesPage from './screens/StatesPage';
-import { GameProvider } from '/Users/oooople/GeographyTrivia-1/context/GameContext.js'; // adjust the import path as needed
+import { GameProvider } from '/Users/oooople/GeographyTrivia-1/context/GameContext.js'; 
 
 
-// Load the font asynchronously
+
 Font.loadAsync({
   'LuckiestGuy': LuckiestGuy_400Regular,
 });

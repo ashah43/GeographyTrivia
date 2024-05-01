@@ -9,27 +9,27 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20, // Add padding horizontally
     },
     globeImage: {
-        width: 250, // Adjust size as needed
-        height: 250, // Adjust size as needed
-        marginBottom: 20, // Space below the image
+        width: 250, 
+        height: 250, 
+        marginBottom: 20, 
     },
     title: {
-        fontSize: 48, // Large text size for title
+        fontSize: 48,
         fontFamily: 'LuckiestGuy',
         color: 'grey',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 40, // Space below the title
+        marginBottom: 40, 
         marginTop: 10,
         paddingHorizontal: 60,
     },
     playButton: {
-        backgroundColor: 'purple', // Green button color
+        backgroundColor: 'purple', 
         
         paddingVertical: 20,
         paddingHorizontal: 60,
         borderRadius: 40,
-        marginBottom: 40, // Space below the button
+        marginBottom: 40, 
         marginTop: 20,
     },
     playButtonText: {
@@ -44,16 +44,16 @@ const styles = StyleSheet.create({
         fontFamily: 'LuckiestGuy',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 20, // Space below the subtitle
+        marginBottom: 20, 
         marginTop: 0 ,
     },
     rulesButton: {
-        backgroundColor: 'purple', // Green button color
+        backgroundColor: 'purple', 
         paddingVertical: 20,
 
         paddingHorizontal: 60,
         borderRadius: 40,
-        marginBottom: 30, // Space below the button
+        marginBottom: 30, 
         marginTop: 20,
     },
     rulesButtonText: {

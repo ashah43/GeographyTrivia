@@ -12,19 +12,17 @@ export default function CorrectAnswerPage() {
     incrementTotalQuestions, 
     highestStreak, 
     currentStreak, 
-    setCurrentStreak // Assuming you expose this in your context to manage the streak
+    setCurrentStreak 
   } = useContext(GameContext);
 
-  // Function to handle pressing the 'Next Question' button
+ 
   const handleNextPress = () => {
-     // Increment the count of correct answers
+     
     
-    navigation.goBack(); // Go back to the previous screen, which should show the next question
+    navigation.goBack(); 
   };
 
-  // Function to handle pressing the 'Results' button
   const handleResultPress = () => {
-    // Navigate to the ResultsPage with the current game statistics
     navigation.navigate('ResultsPage', {
       correctCount: correctAnswers,
       totalQuestions: incrementTotalQuestions,

@@ -10,7 +10,7 @@ export default function CountriesPage() {
   const [response, setResponse] = useState('');
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(null);
-  const [isCorrect, setIsCorrect] = useState(null);  // State to store the correctness of the response
+  const [isCorrect, setIsCorrect] = useState(null); 
   const [correctCount, setCorrectCount] = useState(0);
   const navigation = useNavigation();
   const [timer, setTimer] = useState(30); 
@@ -23,8 +23,8 @@ export default function CountriesPage() {
   }, []);
 
   const resetTimer = () => {
-    clearInterval(intervalRef.current); // Clear any existing interval
-    setTimer(30); // Reset timer to initial value
+    clearInterval(intervalRef.current); 
+    setTimer(30); 
     intervalRef.current = setInterval(() => {
       setTimer((prevTimer) => prevTimer - 1);
     }, 1000);
@@ -41,23 +41,23 @@ export default function CountriesPage() {
   useFocusEffect(
     useCallback(() => {
       if (questions.length) {
-        resetTimer(); // Reset timer on question change
+        resetTimer();
         const randomIndex = Math.floor(Math.random() * questions.length);
         setCurrentQuestion(questions[randomIndex]);
-        setIsCorrect(null);  // Reset correctness state when new question is loaded
+        setIsCorrect(null);  
       }
     }, [questions])
   );
 
   const handleSubmitPress = () => {
-    clearInterval(intervalRef.current); // Stop the timer when the user submits
+    clearInterval(intervalRef.current); 
     incrementTotalQuestions();
 
     if (currentQuestion && response.trim().toLowerCase() === currentQuestion.answer.toLowerCase()) {
-      incrementCorrectAnswers(); // Increment correct answers only if correct
+      incrementCorrectAnswers(); 
       navigation.navigate('CorrectAnswerPage');
   } else {
-      resetStreak(); // Reset streak only if incorrect
+      resetStreak(); 
       navigation.navigate('WrongAnswerPage');
   }
 
@@ -75,7 +75,7 @@ export default function CountriesPage() {
     }
   };
 
-  // Clear the interval when the component is unmounted
+ 
   useEffect(() => {
     return () => clearInterval(intervalRef.current);
   }, []);

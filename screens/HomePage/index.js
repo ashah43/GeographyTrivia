@@ -13,19 +13,11 @@ export default function HomePage() {
     const handleRulesPress = () => {
         navigation.navigate('RulesPage');    
     };
-    const handleCAPress = () => {
-        navigation.navigate('CorrectAnswerPage');    
-    };
-    const handleWAPress = () => {
-        navigation.navigate('WrongAnswerPage');    
-    };
-    const handleResultsPress = () => {
-        navigation.navigate('ResultsPage');    
-    };
+
     return (
         <View style={styles.container}>
             <Image 
-              source={require("/Users/oooople/GeographyTrivia-1/assets/globe.png")} // Update with the path to your globe image
+              source={require("/Users/oooople/GeographyTrivia-1/assets/globe.png")} 
               style={styles.globeImage}
             />
             <Text style={styles.title}>GEOGRAPHY TRIVIA</Text>

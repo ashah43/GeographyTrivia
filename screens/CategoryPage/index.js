@@ -5,7 +5,7 @@ import styles from './styles';
 export default CategoryPage = ({ navigation }) => {
   const categories = ['Countries', 'States', 'Cities', 'Capitals', 'Landmarks'];
   
-  // You could also directly navigate within this function, using the category name
+  
   const handlePress = (category) => {
     let page = `${category}Page`;
     navigation.navigate(page);

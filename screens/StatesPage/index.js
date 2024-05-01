@@ -75,7 +75,6 @@ export default function StatesPage() {
     }
   };
 
-  // Clear the interval when the component is unmounted
   useEffect(() => {
     return () => clearInterval(intervalRef.current);
   }, []);

@@ -7,17 +7,16 @@ import { GameContext } from '/Users/oooople/GeographyTrivia-1/context/GameContex
 
 export default function ResultsPage() {
     const navigation = useNavigation();
-    const { resetGameStats, correctAnswers, totalQuestions, highestStreak, setCorrectAnswers, setTotalQuestions, setHighestStreak, setCurrentStreak } = useContext(GameContext);
+    const { resetGameStats, correctAnswers, totalQuestions, highestStreak, } = useContext(GameContext);
 
-    // Reset all game stats
    
     const handleCategoryChangePress = () => {
-        resetGameStats(); // Reset the game stats before navigating
+        resetGameStats(); 
         navigation.navigate('CategoryPage');
     };
 
     const handleMainMenuPress = () => {
-        resetGameStats(); // Reset the game stats before navigating
+        resetGameStats();
         navigation.navigate('HomePage');
     };
 

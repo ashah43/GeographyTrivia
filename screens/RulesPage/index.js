@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, SafeAreaView, Text, TouchableOpacity} from "react-native";
 import { useNavigation } from '@react-navigation/native';
-import styles from './styles'; // make sure this path matches the location of your styles.js file
-
+import styles from './styles';
 const App = () => {
 
 const navigation = useNavigation();

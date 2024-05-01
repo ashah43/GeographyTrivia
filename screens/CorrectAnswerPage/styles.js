@@ -3,31 +3,31 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'lightgreen', // Mustard background color
+        backgroundColor: 'lightgreen', 
         alignItems: 'center',
         justifyContent: 'center',
-        paddingHorizontal: 20, // Add padding horizontally
+        paddingHorizontal: 20,
     },
     globeImage: {
-        width: 250, // Adjust size as needed
-        height: 250, // Adjust size as needed
-        marginBottom: 20, // Space below the image
+        width: 250, 
+        height: 250, 
+        marginBottom: 20, 
     },
     title: {
-        fontSize: 48, // Large text size for title
+        fontSize: 48,
         fontFamily: 'LuckiestGuy',
         color: 'white',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 20, // Space below the title
+        marginBottom: 20, 
     },
     playButton: {
-        backgroundColor: 'green', // Green button color
+        backgroundColor: 'green',
         
         paddingVertical: 20,
         paddingHorizontal: 60,
         borderRadius: 40,
-        marginBottom: 100, // Space below the button
+        marginBottom: 100,
         marginTop: 30,
     },
     playButtonText: {
@@ -42,16 +42,16 @@ const styles = StyleSheet.create({
         fontFamily: 'LuckiestGuy',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 30, // Space below the subtitle
+        marginBottom: 30,
         marginTop: -50,
     },
     rulesButton: {
-        backgroundColor: 'green', // Green button color
+        backgroundColor: 'green', 
         paddingVertical: 20,
 
         paddingHorizontal: 60,
         borderRadius: 40,
-        marginBottom: 30, // Space below the button
+        marginBottom: 30,
     },
     rulesButtonText: {
         fontSize: 24,
