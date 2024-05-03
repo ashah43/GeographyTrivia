@@ -4,8 +4,7 @@ Welcome to Geography Trivia!!! Thank you so much for trying this game out. Good 
 
 To run this game, make sure you have expo and node installed.       //npm install
 
-Then, to run the code use the line below
-npx expo start
+Then, to run the code use this line:    npx expo start
 
 
 Have fun!
